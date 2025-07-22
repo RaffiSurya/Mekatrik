@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #555;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Datang, <span id="namaPengguna"></span>!</h1>
+  <button onclick="logout()">Logout</button>
+
+  <script src="system.js"></script>
+  <script>
+    // Cek apakah user sudah login
+    const user = ambilUser();
+    if (!user) {
+      // Kalau belum login, arahkan ke login.html
+      alert("Silakan login terlebih dahulu.");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("namaPengguna").textContent = user.username;
+    }
+
+    // Fungsi logout
+    function logout() {
+      localStorage.removeItem("userData");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

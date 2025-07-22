@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1c1c1c;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-box {
+      background-color: #2e2e2e;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      width: 340px;
+    }
+
+    .form-box h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      background-color: #3b3b3b;
+      border: 1px solid #555;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .form-group input::placeholder {
+      color: #aaa;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #666;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #888;
+    }
+
+    .form-link {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .form-link a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .form-link a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Daftar</h2>
+   <form onsubmit="handleRegister(event)">
+  <div class="form-group">
+    <label for="username">Nama Pengguna</label>
+    <input type="text" id="username" name="username" placeholder="Masukkan nama pengguna" required />
+  </div>
+  <div class="form-group">
+    <label for="password">Kata Sandi</label>
+    <input type="password" id="password" name="password" placeholder="Buat kata sandi" required />
+  </div>
+  <input type="submit" value="Daftar" />
+</form>
+
+    <div class="form-link">
+      Sudah punya akun? <a href="index.html">Masuk di sini</a>
+    </div>
+  </div>
+  <script src="system.js"></script>
+</body>
+</html>
